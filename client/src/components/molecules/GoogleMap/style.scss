@@ -1,0 +1,27 @@
+@import "src/styles/colors";
+@import "src/styles/vars";
+
+.google-map-container {
+  height: 100vh;
+  width: 100%;
+
+  .map-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .info-window{
+    width: 200px;
+    height: 50px;
+    background: $white;
+    border-radius: 12px;
+    @extend %flex-align;
+
+    & > div{
+      span{
+        display: block;
+        margin-left: 15px;
+      }
+    }
+  }
+}

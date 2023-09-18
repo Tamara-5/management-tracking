@@ -1,0 +1,52 @@
+@import "src/styles/colors";
+@import "src/styles/vars";
+
+.inp-container {
+  position: relative;
+
+  &_left-icon {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+  &_right-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    transition: 0.2s ease-out;
+
+    &.paddingLeft{
+      padding-left: 50px !important;
+    }
+
+    &.paddingRight{
+      padding-right: 50px !important;
+    }
+
+    &::placeholder {
+      color: $secondary-600
+    }
+
+    &.default {
+      color: black;
+      height: 50px;
+      background: $white;
+      border-radius: 15px;
+      border: 1px solid #ECEEF6;
+
+      &:hover {
+        border: 1px solid $primary-600;
+      }
+
+      &:focus {
+        border: 1px solid $primary-900;
+      }
+    }
+  }
+}

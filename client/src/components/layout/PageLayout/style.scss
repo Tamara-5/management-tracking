@@ -1,0 +1,6 @@
+@import "src/styles/vars";
+.wrapper{
+  &_content{
+    display: flex;
+  }
+}

@@ -1,0 +1,148 @@
+@import "src/styles/colors";
+@import "src/styles/vars";
+
+.shipment-cart {
+  padding: 25px;
+  cursor: pointer;
+  max-width: 390px;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid $secondary-200;
+
+  &:hover, &.active {
+    border: 1px solid $primary-700;
+
+    .shipment-cart_information_transport-img {
+      padding-right: 10px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &_information {
+    @extend %flex-justify-between-center;
+
+    &_transport-details {
+
+      &_number {
+        font-size: 18px;
+        font-weight: 700;
+        color: $black-100;
+        font-style: normal;
+        margin: 5px 0 10px;
+        line-height: normal;
+        letter-spacing: 0.18px;
+      }
+
+      &_type {
+        color: #484A58;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.14px;
+      }
+
+      h6 {
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        color: $secondary-800;
+        letter-spacing: 0.14px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    &_transport-img {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
+  &_additional-information {
+    margin-top: 20px;
+
+    &_location {
+      padding: 20px 0;
+      border-top: 1px solid $secondary-400;
+      border-bottom: 1px solid $secondary-400;
+
+      & > div:first-child {
+        margin-bottom: 25px;
+      }
+
+      &_from, &_to {
+        @extend %flex-align;
+
+        & > div {
+          margin-left: 15px;
+
+          span:first-child {
+            font-size: 16px;
+            font-weight: 700;
+            color: $black-100;
+            margin-bottom: 3px;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.16px;
+          }
+
+          span:last-child {
+            font-size: 12px;
+            font-weight: 400;
+            font-style: normal;
+            line-height: normal;
+            color: $secondary-800;
+            letter-spacing: 0.12px;
+          }
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &_client {
+      @extend %flex-justify-between-center;
+      padding-top: 20px;
+
+      &_information {
+        @extend %flex-align;
+
+        &_avatar {
+          margin-right: 10px;
+        }
+
+        &_name {
+          h6 {
+            font-size: 14px;
+            font-weight: 600;
+            font-style: normal;
+            line-height: normal;
+            color: $secondary-800;
+            letter-spacing: 0.14px;
+          }
+
+          span{
+            color: $black-100;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.16px;
+          }
+        }
+      }
+
+      &_contact {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}

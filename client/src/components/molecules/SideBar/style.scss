@@ -1,0 +1,39 @@
+@import "src/styles/colors";
+@import "src/styles/vars";
+
+.side-bar{
+  width: 105px;
+  height: 100vh;
+  display: flex;
+  background:$white;
+  flex-direction: column;
+  padding: 35px 22px 105px;
+  @extend %flex-column-between;
+  border-right: 1px solid $secondary-20;
+
+  &_top{
+    text-align: center;
+  }
+
+  &_middle{
+    height: 100%;
+    padding: 75px 0 60px;
+    @extend %flex-column-between;
+  }
+
+  &_item {
+    padding: 15px;
+    background: none;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+      background: $primary-10;
+    }
+
+    &.active {
+      background: $primary-900;
+      color: $white;
+    }
+  }
+}
